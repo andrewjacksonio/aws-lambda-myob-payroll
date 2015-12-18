@@ -43,9 +43,12 @@ exports.handler = function(event, context) {
     //parse the payment period dates to date format
     var dateDelim = " – ";
     var arrayPaymentPeriod = event.paymentPeriod.split(dateDelim);
-	console.log("datdelim is:" + dateDelim);
-	console.log("split0 is:" + arrayPaymentPeriod[0]);
-	console.log("split1 is:" + arrayPaymentPeriod[1]);
+	/*
+		//debugging issue with deliminator character not being recognised
+		console.log("datdelim is:" + dateDelim);
+		console.log("split0 is:" + arrayPaymentPeriod[0]);
+		console.log("split1 is:" + arrayPaymentPeriod[1]);
+	*/
     var periodStartDate = parsePayslipDate(arrayPaymentPeriod[0]);
     var periodEndDate = parsePayslipDate(arrayPaymentPeriod[1]);
     
