@@ -41,7 +41,7 @@ exports.handler = function(event, context) {
     if (superRate < 0 || superRate > 0.5) { context.fail("Super rate must be between 0-50%."); }
 
     //parse the payment period dates to date format
-    var dateDelim = " - ";
+    var dateDelim = " – ";
     var arrayPaymentPeriod = event.paymentPeriod.split(dateDelim);
 	console.log("datdelim is:" + dateDelim);
 	console.log("split0 is:" + arrayPaymentPeriod[0]);
