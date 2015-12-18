@@ -43,6 +43,9 @@ exports.handler = function(event, context) {
     //parse the payment period dates to date format
     var dateDelim = " - ";
     var arrayPaymentPeriod = event.paymentPeriod.split(dateDelim);
+	console.log("datdelim is:" + dateDelim);
+	console.log("split0 is:" + arrayPaymentPeriod[0]);
+	console.log("split1 is:" + arrayPaymentPeriod[1]);
     var periodStartDate = parsePayslipDate(arrayPaymentPeriod[0]);
     var periodEndDate = parsePayslipDate(arrayPaymentPeriod[1]);
     
@@ -113,7 +116,7 @@ exports.handler = function(event, context) {
 
     //handles different date formats
     function parsePayslipDate(payslipDate) {
-        var strDate = payslipDate.split(" ", 3);
+        var strDate = payslipDate.split(' ', 3);
         var newDate = new Date();
         newDate.setMilliseconds(0);
         newDate.setSeconds(0);
