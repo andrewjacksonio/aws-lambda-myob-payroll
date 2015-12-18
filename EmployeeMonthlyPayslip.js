@@ -25,6 +25,13 @@ exports.handler = function(event, context) {
     Date.prototype.getMonthName = function() {
         return this.monthNames[this.getMonth()];
     };
+	    
+    //log exact inputs
+    console.log("event.firstName: " + event.firstName);
+    console.log("event.lastName: " + event.lastName);
+    console.log("event.annualSalary: " + event.annualSalary);
+    console.log("event.superRate: " + event.superRate);
+    console.log("event.paymentPeriod: " + event.paymentPeriod);
     
     //validate inputs
     var annualSalary = event.annualSalary;
