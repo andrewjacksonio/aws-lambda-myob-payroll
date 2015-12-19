@@ -83,7 +83,7 @@ exports.handler = function(event, context) {
                                 ,Math.round(payPeriodIncomeGross)
                                 ,Math.round(payPeriodIncomeTax)
                                 ,Math.round(payPeriodIncomeNet)
-                                ,Math.round(payPeriodSuper)+1000);
+                                ,Math.round(payPeriodSuper));
                                 
     context.succeed(csvLine);   //output single line
 
