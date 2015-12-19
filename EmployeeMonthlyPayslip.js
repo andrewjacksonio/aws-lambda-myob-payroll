@@ -1,7 +1,8 @@
 /*
- *      Title:  MYOB Coding Exercise!
- *      Coder:  Andrew Jackson
- *      Date:   12 December 2015
+ *      Title:  	MYOB Coding Exercise!
+ *      Coder:  	Andrew Jackson
+ *      Date:   	12 December 2015
+ *      Modified:   19 December 2015
  */
 
 console.log('Loading function');
@@ -81,7 +82,7 @@ exports.handler = function(event, context) {
                                 ,zeroPad(periodStartDate.getDate(),2) + ' ' + periodStartDate.getMonthName() + dateDelim + zeroPad(periodEndDate.getDate(),2) + ' ' + periodEndDate.getMonthName()
                                 ,Math.round(payPeriodIncomeGross)
                                 ,Math.round(payPeriodIncomeTax)
-                                ,Math.round(payPeriodIncomeNet) + 5	//false negative for testing
+                                ,Math.round(payPeriodIncomeNet)
                                 ,Math.round(payPeriodSuper));
                                 
     context.succeed(csvLine);   //output single line
