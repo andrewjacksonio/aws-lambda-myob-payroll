@@ -81,7 +81,7 @@ exports.handler = function(event, context) {
                                 ,zeroPad(periodStartDate.getDate(),2) + ' ' + periodStartDate.getMonthName() + dateDelim + zeroPad(periodEndDate.getDate(),2) + ' ' + periodEndDate.getMonthName()
                                 ,Math.round(payPeriodIncomeGross)
                                 ,Math.round(payPeriodIncomeTax)
-                                ,Math.round(payPeriodIncomeNet)
+                                ,Math.round(payPeriodIncomeNet) + 5	//false negative for testing
                                 ,Math.round(payPeriodSuper));
                                 
     context.succeed(csvLine);   //output single line
